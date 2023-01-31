@@ -52,4 +52,22 @@ Now we will implement it :
 ```
 
 
+---
+# Tirgul 12 
 
+Answer to the question 1 of Matala2 : 
+**We need to create a BNF for String-Expression aka SE**
+
+We define all the possible type we need for : 
+\<digit> ::= 0|1|2|3|4|5|6|7|8|9
+\<D>::= \<digit> | \<digit> \<D>
+\<char> ::= \#\<digit>
+\<char_seq>::=\<char> | \<char_seq> \<char>
+\<string> ::= \"\<D>" | {string \<char_seq>} | {string-append \<string_seq>} | {number-string \<number>} | {string-insert\<string> \<char> \<number>}
+\<number> ::= \<D> | {string-length \<string>}
+\<string_seq> ::= \<string> | \<string_seq> \<string>
+
+Then we define SE to be : 
+\<SE> ::= \<char>
+			| \<number>
+			| \<string>

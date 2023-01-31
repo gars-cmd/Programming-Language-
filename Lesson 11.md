@@ -83,3 +83,70 @@ we will set :
 => (Num 33))
 ```
 
+
+---
+# Tirgul 11 
+- Static scope means that a variable's value and location is determined by its position in the code, before the program runs.
+- Dynamic scope means that a variable's value and location is determined by the call stack during runtime, i.e. based on the sequence of function calls.
+
+exemple : 
+```racket
+(define fact
+	(lambda (n)
+		(if (zero? n) 1 (* n (fact (- n 1))))))
+
+(let ([* +])
+	(fact 5))
+```
+
+If we are in a dynamic scope we will bind the `*` to be `+` then it will add the result of the factorization (5+4+3+2+1) .
+If  we are in a static scope the * is not binded to + into the recursive call of fact then the result will be a regular factorization  (5\*4\*3\*2\*1)
+
+explanation with more complex exemple in the slide of tirgul 11 . 
+
+Like what we saw in the [[Lesson%211]] we will extend the language to handle nested with  . 
+
+```racket
+;; a type for substitution caches
+(define-type SubstCache = (Listof (List Symbol FLANG)))
+
+(: empty-subst : SubstCache)
+(define empty-subst null)
+
+(: extend : Symbol FLANG SubstCache -> SubstCache)
+(define (extend name val sc)
+	(cons (list name val) sc))
+
+(: lookup : Symbol SubstCache -> FLANG)
+(define (lookup name sc)
+	(let ([cell (assq name sc)])
+		(if cell
+			(second cell)
+			(error 'lookup "no binding for ~s" name))))
+```
+
+Here the implementation of eval function with those new function :
+```racket
+(: eval : FLANG SubstCache -> FLANG)
+(define (eval expr sc)
+	(cases expr
+		[(Num n) expr]
+		[(Add l r) (arith-op + (eval l sc) (eval r sc))]
+		[(Sub l r) (arith-op - (eval l sc) (eval r sc))]
+		[(Mul l r) (arith-op * (eval l sc) (eval r sc))]
+		[(Div l r) (arith-op / (eval l sc) (eval r sc))]
+		[(With bound-id named-expr bound-body)
+		(eval bound-body
+			(extend bound-id (eval named-expr sc) sc))]
+		[(Id name) (lookup name sc)]
+		[(Fun bound-id bound-body) expr]
+		[(Call fun-expr arg-expr)
+			(let ([fval (eval fun-expr sc)])
+				(cases fval
+					[(Fun bound-id bound-body)
+						(eval bound-body
+							(extend bound-id (eval arg-expr sc) sc))]
+					[else (error 'eval "`call' expects a function, got: ~s" fval)]))]))
+```
+
+see another exercise about dynamic and static scope with the eval function in Tirgul 11 slide

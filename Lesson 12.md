@@ -71,3 +71,6 @@ Then we define SE to be :
 \<SE> ::= \<char>
 			| \<number>
 			| \<string>
+
+
+See exercise in tirgul 12 the last one 

@@ -149,4 +149,22 @@ Here the implementation of eval function with those new function :
 					[else (error 'eval "`call' expects a function, got: ~s" fval)]))]))
 ```
 
-see another exercise about dynamic and static scope with the eval function in Tirgul 11 slide
+Exercise : given the following expression show how the `eval` function work with the model of exchanges and with the model of SubstCache . 
+```racket 
+(run "{with {foo {fun {x} {* x x}}}
+              {call {with {foo {fun {y} {- y 1}}}
+                           {fun {x} {call foo x}}} 
+				4}}”)
+```
+See the slide to see how to run with the model of exchange : 
+
+For the model of SubstCache : 
+1. The first step is to evaluate the expression `{with {foo {fun {x} {* x x}}} {call {with {foo {fun {y} {- y 1}}} {fun {x} {call foo x}}} 4}}`. The expression is a With expression, so the With clause is matched.
+2. The With clause takes two sub-expressions, `bound-id` and `bound-body`. `bound-id` is `foo` and `bound-body` is `{call {with {foo {fun {y} {- y 1}}} {fun {x} {call foo x}}} 4}`.
+3. The `named-expr` is `{fun {x} {* x x}}`. This is evaluated to a Fun expression and the substitution cache is extended with `bound-id` `foo` and value `Fun {x} {* x x}` using the extend function. The substitution cache now becomes (extend 'foo (Fun {x} {* x x}) empty-subst).
+4. The `bound-body` expression `{call {with {foo {fun {y} {- y 1}}} {fun {x} {call foo x}}} 4}` is now evaluated using the updated substitution cache. This expression is a Call expression, so the Call clause is matched.
+5. The `Call` clause takes two sub-expressions, `fun-expr` and `arg-expr`. `fun-expr` is `{with {foo {fun {y} {- y 1}}} {fun {x} {call foo x}}}` and `arg-expr` is 4.
+6. The `fun-expr` is evaluated first, which is a `With` expression. The `With` clause is matched and the `named-expr` is `{fun {y} {- y 1}}` and the `bound-body` is `{fun {x} {call foo x}}`.
+7. The `named-expr` is evaluated to a `Fun` expression and the substitution cache is extended
+
+## need the rest 

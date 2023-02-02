@@ -123,11 +123,11 @@ then we get also in total (3 x  \[1])
 
 
 With Tree : 
-![image]( Pasted image 20221103164858.png?raw=true )
+![image](https://github.com/gars-cmd/Programming-Language-/blob/main/Pasted%20image%2020221103164858.png)
 
 
 !  Warning about the order of  the operation  (Ambiguities)
-![image]( Pasted image 20221103165617.png?raw=true )
+![image](https://github.com/gars-cmd/Programming-Language-/blob/main/Pasted%20image%2020221103165617.png)
 
 
 ---

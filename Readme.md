@@ -1,7 +1,7 @@
 
 A summary of last year's video recordings and slides of the exercises
 
-- [Lesson 1](Lesson%201.md) 
+- [Lesson 1](lesson%201.md) 
 - [Lesson 2](Lesson%202.md) 
 - [Lesson 3](Lesson%203.md) 
 - [Lesson 4](Lesson%204.md) 

@@ -1,5 +1,5 @@
 
-according to what we saw in [[Lesson 2]]  , If we want to create a function that return the average of 2 numbers :
+according to what we saw in [Lesson 2](Lesson%203)  , If we want to create a function that return the average of 2 numbers :
 
 ```racket
 (: average2 : Number Number -> Number)
@@ -112,14 +112,14 @@ We first define our AE to represent numbers :
 \<AE> ::= \<num>
 
 And we define the operation to made with them :
-[1] \<AE> ::= \<num>  |
-[2] \<AE> + \<AE> |
-[3] \<AE> - \<AE>
+\[1] \<AE> ::= \<num>  |
+\[2] \<AE> + \<AE> |
+\[3] \<AE> - \<AE>
 
 to get the operation 1+4-2 , we can recreate it with the definition we already made :
-\<AE> => \<AE> - \<AE> ([3])
-= \<AE> => (\<AE> + \<AE>) - \<AE>  ([2])
-then we get also in total (3 x  [1])
+\<AE> => \<AE> - \<AE> (\[3])
+= \<AE> => (\<AE> + \<AE>) - \<AE>  (\[2])
+then we get also in total (3 x  \[1])
 
 
 With Tree : 

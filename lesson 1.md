@@ -45,11 +45,11 @@ Racket is an aggregation of a lot of programming language  ,  we are gonna use P
 
 ### Imperative Language 
 **what is Imperative language ?**
-
+>An imperative programming language is a programming language that uses statements that change a program's state. Imperative languages are based on the idea of giving the computer a sequence of tasks to perform, using statements that change a program's state. Examples of imperative languages include C, C++, Java, and Python.
 
 ### Functional language 
 **what is functional  language ?**
-
+>A functional programming language is a programming language that uses mathematical functions to describe the behavior of the program. In functional programming, the output of a function depends only on its inputs, and there is no side effect that changes the state of the program. This makes functional programming well suited for tasks that can be parallelized and for code that is easy to reason about. Examples of functional programming languages include Haskell, Lisp, Scheme, and Erlang.
 
 
 

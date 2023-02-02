@@ -132,7 +132,7 @@ we define new type for our environment  :
 
 (define-type VAL
 	[NumV Number]
-	[FunV Symbol FLANG ENV])``
+	[FunV Symbol FLANG ENV])
 
 (: lookup : Symbol ENV -> VAL)
 (define (lookup name env)

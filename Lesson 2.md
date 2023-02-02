@@ -20,16 +20,16 @@ second comment  line
 
 or 
 
-`cons 7 (list -9 8 7 10 2)` that give us the list : [7, -9, 8, 7, 10, 2]
+`cons 7 (list -9 8 7 10 2)` that give us the list : \[7, -9, 8, 7, 10, 2]
 in the same way we add an element at the beginning of the list.
 
 - if we want to create an array of one element we create a pair with only one element .
 `(cons 1 null)`
 
 another exemple :
-`(cons 'a (cons 2 null)` we first create the pair (2, null) that equal to the list [2] then we concatenate it with the second pair (a,(2, null)) -> [a, 2]
+`(cons 'a (cons 2 null)` we first create the pair (2, null) that equal to the list \[2] then we concatenate it with the second pair (a,(2, null)) -> \[a, 2]
 
->To declare a list with char we need to declare them before (as explained in [[lesson 1]] ) as follow:
+>To declare a list with char we need to declare them before (as explained in [Lesson 1](Lesson%201) ) as follow:
 `(list 'a 'b 'c 5 6 7'`
 
 - To append en element  to an array  we use the word `append` as follow .
@@ -37,7 +37,7 @@ another exemple :
 ```rkt
 (append (list 3 4 5) (list 6 7 8))
 ```
-we get from the command above the list : [3, 4, 5, 6, 7, 8,]
+we get from the command above the list : \[3, 4, 5, 6, 7, 8,]
 
 - To get a specific element of an array :
 ```rkt
@@ -59,7 +59,7 @@ we get from the command above the list : [3, 4, 5, 6, 7, 8,]
 ```
 
 - To get all the element  except the first :
-`(rest (list 2 3 4))` return [3, 4]
+`(rest (list 2 3 4))` return \[3, 4]
 
 
 - To get the length of a list ;

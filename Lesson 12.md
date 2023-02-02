@@ -5,7 +5,7 @@ How to define a constant  in racket:
 (define pi 3.14)
 ```
 
-The `assq` function exist in racket and do a part of the lookup function  from [[Lesson 11]]  
+The `assq` function exist in racket and do a part of the lookup function  from [Lesson 11](Lesson%211.md)  
 ```racket 
 (assq 'a '((1 2) (3 4) (a b) (7 8)))
 ; return '(a b)
@@ -21,7 +21,7 @@ let ([cell (assq name sc)])
 (error 'lookup "free instance ~s" name))))
 ```
 
-Now we will change some of the specification of eval from [[Lesson 11]] 
+Now we will change some of the specification of eval from [Lesson 11](Lesson%211.md) 
 7.eval ({with {x E1} E2}, sc) = eval(E2, extend(x, eval(E1, sc), sc))
 9.eval ({call E1 E2}, sc ) = if {fun {x} E} <-- eval(E1, sc)
 												eval (E, extend(x, eval(E2, sc),sc))

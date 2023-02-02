@@ -14,7 +14,7 @@ It's important in a language to allow to attribute values to variables :
 
 In our language we will add another key-word `with` that will add a local variable
 
-for that we will use the  older definition from [[Lesson 5]] :
+for that we will use the  older definition from [Lesson 5](Lesson%205.md) :
 
 The WAE grammer 
 

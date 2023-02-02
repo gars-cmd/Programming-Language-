@@ -1,5 +1,5 @@
 
-Like we saw in [[Lesson 3]]  , we will define a new operation for \<AE>
+Like we saw in [Lesson 3](Lesson%203.md)  , we will define a new operation for \<AE>
 
 \<AE> :: = 1.\<num>
 					2.	 | \<AE> + \<AE>
@@ -29,8 +29,7 @@ we will define
 
 exemple:
 
-![[Pasted image 20221108153306.png]]
-
+![Image](https://github.com/gars-cmd/Programming-Language-/blob/main/Pasted%20image%20221108153306.png)
 Now let's program our language :
 ```racket
 ;definition of the language and the operations that can be done on it

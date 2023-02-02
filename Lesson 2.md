@@ -29,7 +29,7 @@ in the same way we add an element at the beginning of the list.
 another exemple :
 `(cons 'a (cons 2 null)` we first create the pair (2, null) that equal to the list \[2] then we concatenate it with the second pair (a,(2, null)) -> \[a, 2]
 
->To declare a list with char we need to declare them before (as explained in [Lesson 1](Lesson%201) ) as follow:
+>To declare a list with char we need to declare them before (as explained in [Lesson 1](Lesson%201.md) ) as follow:
 `(list 'a 'b 'c 5 6 7'`
 
 - To append en element  to an array  we use the word `append` as follow .

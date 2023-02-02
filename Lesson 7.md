@@ -1,4 +1,4 @@
-we will use again the `with` keyword we saw on [[Lesson 6]].
+we will use again the `with` keyword we saw on [Lesson 6](Lesson%206.md).
 
 we want to define the operation substitution:
 `e[v/i]` = To substitute an identifier 'i' in an expression 'e' with an expression 'v' , replace 

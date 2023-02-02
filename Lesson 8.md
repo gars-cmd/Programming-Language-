@@ -1,5 +1,5 @@
 
-example from [[Lesson 7]]  :
+example from [Lesson 7](Lesson%207.md)  :
 
 ```racket
 (eval (With 'x (Add (Num 5) (Num 3)) (* (Id 'x) (Id 'x')) ))`
@@ -13,7 +13,7 @@ example from [[Lesson 7]]  :
 
 
 let's now write the implementation in racket ;
-we will use the subst function from [[Lesson 7]] 
+we will use the subst function from [Lesson 7](Lesson%207.md) 
 
 ```racket
 (: run : String -> Number)

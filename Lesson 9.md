@@ -1,4 +1,4 @@
-we will add from what we have done in [[Lesson 8]] the use of function , and change from now WAE with FLANG ( what we made before name WAE is now FLANG)
+we will add from what we have done in [Lesson 8](Lesson%208.md) the use of function , and change from now WAE with FLANG ( what we made before name WAE is now FLANG)
 
 we want to implement this kind of operation :
 	`{call {fun {x} {* x x}} 5 }*` that mean we wan to **call** the function **fun** with the parameter 5
@@ -24,7 +24,7 @@ or this kind of operation :
 
 ```
 
-we took what we did from [[Lesson 6]] to implement call and fun 
+we took what we did from [Lesson 6](Lesson%206.md) to implement call and fun 
 
 ```racket
 (: parse-sexpr : Sexpr -> WAE)
@@ -61,7 +61,7 @@ we took what we did from [[Lesson 6]] to implement call and fun
 ```
 
 Specification of subst :
-N\[v/x] = N (i want to substitute all the occurrence of x by v in N , from   [[Lesson 7]] )
+N\[v/x] = N (i want to substitute all the occurrence of x by v in N , from  [Lesson 7](Lesson%207.md) 
 (+ E1 E2) \[v/x] = (+E1 \[v/x] E2\[v/x])
 
 N\[v/x] = N
@@ -161,18 +161,18 @@ Exemple of decomposition of the parsing :
 
 Add new rules for subst function : 
 
-N[v/x]= N
-{+ E1 E2}[v/x]= {+ E1[v/x] E2[v/x]}
-{- E1 E2}[v/x]= {- E1[v/x] E2[v/x]}
-{\* E1 E2}[v/x]= {* E1[v/x] E2[v/x]}
-{/ E1 E2}[v/x]= {/ E1[v/x] E2[v/x]}
-y[v/x]= y
-x[v/x]= v
-{with {y E1} E2}[v/x]= {with {y E1[v/x]} E2[v/x]} ; if y =/= x
-{with {x E1} E2}[v/x]= {with {x E1[v/x]} E2}
-{call E1 E2}[v/x]= {call E1[v/x] E2[v/x]}
-{fun {y} E}[v/x]= {fun {y} E[v/x]} ; if y =/= x
-{fun {x} E}[v/x]= {fun {x} E}
+N\[v/x]= N
+{+ E1 E2}\[v/x]= {+ E1\[v/x] E2\[v/x]}
+{- E1 E2}\[v/x]= {- E1\[v/x] E2\[v/x]}
+{\* E1 E2}\[v/x]= {* E1\[v/x] E2\[v/x]}
+{/ E1 E2}\[v/x]= {/ E1\[v/x] E2\[v/x]}
+y\[v/x]= y
+x\[v/x]= v
+{with {y E1} E2}\[v/x]= {with {y E1\[v/x]} E2\[v/x]} ; if y =/= x
+{with {x E1} E2}\[v/x]= {with {x E1\[v/x]} E2}
+{call E1 E2}\[v/x]= {call E1\[v/x] E2\[v/x]}
+{fun {y} E}\[v/x]= {fun {y} E\[v/x]} ; if y =/= x
+{fun {x} E}\[v/x]= {fun {x} E}
 
 **racket implementation** :
 

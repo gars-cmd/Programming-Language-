@@ -1,4 +1,4 @@
-**Formal specification of eval :**
+**Formal specification of eval :**11
 1. eval (N) = N 
 2. eval ({+ E1 E2}) = eval (E1) + eval (E2)
 3. eval ({- E1 E2}) = eval (E1) - eval (E2)
@@ -104,7 +104,7 @@ If  we are in a static scope the * is not binded to + into the recursive call of
 
 explanation with more complex exemple in the slide of tirgul 11 . 
 
-Like what we saw in the [[Lesson%211]] we will extend the language to handle nested with  . 
+Like what we saw in the lesson we will extend the language to handle nested with  . 
 
 ```racket
 ;; a type for substitution caches

@@ -17,7 +17,8 @@ AE -> Number
 
 
 
-![[Pasted image 20221122162908.png]]
+![Image](https://github.com/gars-cmd/Programming-Language-/blob/main/Pasted%20image%20221122162908.png)
+)
 
 
 ```rkt

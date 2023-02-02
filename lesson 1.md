@@ -91,7 +91,7 @@ Characteres : #\a , #\b
 ```
 
 #### How racket evaluate an expression
-![[Pasted image 20230127122859.png]]
+![image]( Pasted image 20230127122859.png )
 
 
 #### If statement in racket 

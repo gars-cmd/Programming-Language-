@@ -2,7 +2,7 @@ In this course we are gonna write our own programmation language.
 
 
 ### Interpreter 
-****What is an interpreter ?***
+***What is an interpreter ?***
 > An interpreter is a computer program that is used to directly execute program instructions written using one of the many high-level programming languages. The interpreter transforms the high-level program into an intermediate language that it then executes, or it could parse the high-level source code and then performs the commands directly, which is done line by line or statement by statement.
 
 

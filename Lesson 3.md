@@ -123,11 +123,11 @@ then we get also in total (3 x  \[1])
 
 
 With Tree : 
-![image]( Pasted image 20221103164858.png )
+![image]( Pasted image 20221103164858.png?raw=true )
 
 
 !  Warning about the order of  the operation  (Ambiguities)
-![image]( Pasted image 20221103165617.png )
+![image]( Pasted image 20221103165617.png?raw=true )
 
 
 ---

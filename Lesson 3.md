@@ -1,5 +1,5 @@
 
-according to what we saw in [Lesson 2](Lesson%202)  , If we want to create a function that return the average of 2 numbers :
+according to what we saw in [Lesson 2](Lesson%202.md)  , If we want to create a function that return the average of 2 numbers :
 
 ```racket
 (: average2 : Number Number -> Number)

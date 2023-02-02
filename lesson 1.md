@@ -32,9 +32,6 @@ In this course we are gonna write our own programmation language.
 -   A statement is syntactically valid if it follows all the rules.
 -   It is related to the grammar and structure of the language.
 
-
-
-
 The difference between semantic and syntax  is the difference between the rules and the signification where the rules are the syntax and the signification  are the semantic .
 
 
@@ -51,7 +48,7 @@ Racket is an aggregation of a lot of programming language  ,  we are gonna use P
 **what is functional  language ?**
 >A functional programming language is a programming language that uses mathematical functions to describe the behavior of the program. In functional programming, the output of a function depends only on its inputs, and there is no side effect that changes the state of the program. This makes functional programming well suited for tasks that can be parallelized and for code that is easy to reason about. Examples of functional programming languages include Haskell, Lisp, Scheme, and Erlang.
 
-
+The racket language is both Imperative  and functional  it's called a multi-paradigm language .
 
 
 ### Basics of Racket/PL language
